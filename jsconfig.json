@@ -1,0 +1,38 @@
+// {
+//     "compilerOptions": {
+//       "baseUrl": "./",
+//       "paths": {
+//         "*": ["./src/*"],
+//         "@assets/*": ["./src/assets/*"],
+//         "@components/*": ["./src/components/*"],
+//         "@configs/*": ["./src/configs/*"],
+//         "@constants/*": ["./src/constants/*"],
+//         "@features/*": ["./src/features/*"],
+//         "@navigation/*": ["./src/navigation/*"],
+//         "@queries/*": ["./src/queries/*"],
+//         "@styles/*": ["./src/styles/*"],
+//         "@utils/*": ["./src/utils/*"],
+//         "@redux/*": ["./src/redux/*"]
+//       }
+//     }
+//   }
+
+
+  // {
+  //   "compilerOptions": {
+  //     "baseUrl": ".",
+  //     "paths": {
+  //       "src/*": ["./src/*"],
+  //       "assets/*": ["./src/assets/*"],
+  //       "components/*": ["./src/components/*"],
+  //       "configs/*": ["./src/configs/*"],
+  //       "constants/*": ["./src/constants/*"],
+  //       "navigation/*": ["./src/navigation/*"],
+  //       "redux/*": ["./src/redux/*"],
+  //       "features/*": ["./src/features/*"],
+  //       "styles/*": ["./src/features/*"],
+  //       "queries/*": ["./src/queries/*"],
+  //       "utils/*": ["./src/utils/*"],
+  //     }
+  //   }
+  // }
