@@ -1,10 +1,16 @@
 /* eslint-disable react-native/no-inline-styles */
-import { StyleSheet, Text, View, SafeAreaView, TouchableWithoutFeedback } from 'react-native';
-import React, { useRef } from 'react';
-import Toast from './src/components/Toast';
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import {
+  StyleSheet,
+  Text,
+  View,
+  SafeAreaView,
+  TouchableWithoutFeedback,
+} from "react-native";
+import React, { useRef } from "react";
+import Toast from "./src/components/CustomToast";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
-const index = () => {
+const TostScreen = () => {
   const toastRef = useRef();
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
@@ -13,8 +19,8 @@ const index = () => {
         <TouchableWithoutFeedback
           onPress={() => {
             toastRef.current.show({
-              type: 'success',
-              text: 'Success Toast',
+              type: "success",
+              text: "Success Toast",
               duration: 2000,
             });
           }}
@@ -26,8 +32,8 @@ const index = () => {
         <TouchableWithoutFeedback
           onPress={() => {
             toastRef.current.show({
-              type: 'error',
-              text: 'Error Toast',
+              type: "error",
+              text: "Error Toast",
               duration: 2000,
             });
           }}
@@ -39,8 +45,8 @@ const index = () => {
         <TouchableWithoutFeedback
           onPress={() => {
             toastRef.current.show({
-              type: 'warning',
-              text: 'Warning Toast',
+              type: "warning",
+              text: "Warning Toast",
               duration: 2000,
             });
           }}
@@ -54,23 +60,23 @@ const index = () => {
   );
 };
 
-export default index;
+export default TostScreen;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "white",
+    alignItems: "center",
+    justifyContent: "center",
   },
   button: {
     width: 300,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#FEC520',
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#FEC520",
     padding: 20,
     borderRadius: 15,
     marginTop: 20,
   },
-  buttonText: { fontSize: 16, fontWeight: '600', color: 'black' },
+  buttonText: { fontSize: 16, fontWeight: "600", color: "black" },
 });

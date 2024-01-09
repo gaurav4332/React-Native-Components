@@ -10,7 +10,8 @@ import Animated, {
   runOnJS,
 } from 'react-native-reanimated';
 import { Gesture, GestureDetector } from 'react-native-gesture-handler';
-const Toast = forwardRef(({}, ref) => {
+
+const CustomToast = forwardRef(({}, ref) => {
   const toastTopAnimation = useSharedValue(-100);
   const context = useSharedValue(0);
   const [showing, setShowing] = useState(false);
@@ -131,7 +132,7 @@ const Toast = forwardRef(({}, ref) => {
   );
 });
 
-export default Toast;
+export default CustomToast;
 
 const styles = StyleSheet.create({
   toastContainer: {

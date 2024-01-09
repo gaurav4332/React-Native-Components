@@ -1,30 +1,14 @@
-import {StyleSheet, Text, View} from 'react-native';
-import React from 'react';
-import Switch from './src/components/Switch';
+import { StyleSheet, Text, View } from "react-native";
+import React from "react";
+import TostScreen from "./src/srcCustomToast";
+import CustomSwitchScreen from "./src/srcCustomAnimatedSwitch";
 
 const App = () => {
-  const handleChange = data => {
-    console.log('data', data);
-  };
   return (
-    <View
-      style={{
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: 'red',
-        flex: 1,
-      }}>
-      <Switch
-        activeColor={'#FFA901'}
-        inActiveColor={'#F2F5F7'}
-        onValueChange={handleChange}
-      />
-      <Switch
-        activeColor={'#FFA901'}
-        inActiveColor={'#F2F5F7'}
-        onValueChange={handleChange}
-      />
-    </View>
+    <>
+      {/* <TostScreen /> */}
+      <CustomSwitchScreen />
+    </>
   );
 };
 
