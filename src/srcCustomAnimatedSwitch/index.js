@@ -1,13 +1,21 @@
 import { StyleSheet, View, Text } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 import CustomSwitch from "./src/components/CustomSwitch";
 
 const CustomSwitchScreen = () => {
+  const [active, setActive] = useState(false);
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Custom Switch</Text>
       <View style={styles.switchContainer}>
-        <CustomSwitch activeColor={"#FFA901"} inActiveColor={"#F2F5F7"} />
+        <CustomSwitch
+          activeColor={"#FFA901"}
+          inActiveColor={"#F2F5F7"}
+          active={active}
+          onPress={() => {
+            setActive(!active);
+          }}
+        />
       </View>
       <View style={styles.switchContainer}>
         <CustomSwitch activeColor={"#92d7ef"} inActiveColor={"#F2F5F7"} />

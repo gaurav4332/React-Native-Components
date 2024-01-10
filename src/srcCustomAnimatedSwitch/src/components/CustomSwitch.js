@@ -1,5 +1,5 @@
-import { StyleSheet, TouchableWithoutFeedback } from 'react-native';
-import React, { useState, useEffect } from 'react';
+import { StyleSheet, TouchableWithoutFeedback } from "react-native";
+import React, { useState, useEffect } from "react";
 import Animated, {
   interpolateColor,
   useSharedValue,
@@ -7,13 +7,16 @@ import Animated, {
   withSpring,
   withTiming,
   useDerivedValue,
-} from 'react-native-reanimated';
+} from "react-native-reanimated";
 
-const CustomSwitch = ({ activeColor, inActiveColor }) => {
+const CustomSwitch = ({
+  activeColor,
+  inActiveColor,
+  onPress,
+  active = false,
+}) => {
   // value for Switch Animation
   const switchTranslate = useSharedValue(0);
-  // state for activate Switch
-  const [active, setActive] = useState(false);
   // Progress Value
   const progress = useDerivedValue(() => {
     return withTiming(active ? 22 : 0);
@@ -48,18 +51,18 @@ const CustomSwitch = ({ activeColor, inActiveColor }) => {
 
   // Background Color Animation
   const backgroundColorStyle = useAnimatedStyle(() => {
-    const backgroundColor = interpolateColor(progress.value, [0, 22], [inActiveColor, activeColor]);
+    const backgroundColor = interpolateColor(
+      progress.value,
+      [0, 22],
+      [inActiveColor, activeColor]
+    );
     return {
       backgroundColor,
     };
   });
 
   return (
-    <TouchableWithoutFeedback
-      onPress={() => {
-        setActive(!active);
-      }}
-    >
+    <TouchableWithoutFeedback onPress={onPress}>
       <Animated.View style={[styles.container, backgroundColorStyle]}>
         <Animated.View style={[styles.circle, customSpringStyles]} />
       </Animated.View>
@@ -74,15 +77,15 @@ const styles = StyleSheet.create({
     width: 50,
     height: 28,
     borderRadius: 30,
-    justifyContent: 'center',
-    backgroundColor: '#F2F5F7',
+    justifyContent: "center",
+    backgroundColor: "#F2F5F7",
   },
   circle: {
     width: 24,
     height: 24,
     borderRadius: 30,
-    backgroundColor: 'white',
-    shadowColor: 'black',
+    backgroundColor: "white",
+    shadowColor: "black",
     shadowOffset: {
       width: 0,
       height: 2,
