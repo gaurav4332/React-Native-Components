@@ -3,6 +3,7 @@ import React from "react";
 import TostScreen from "./src/srcCustomToast";
 import CustomSwitchScreen from "./src/srcCustomAnimatedSwitch";
 import CheckboxScreen from "./src/srcCustomAnimatedCheckbox";
+import AnimatedTabScreen from "./src/srcAnimatedTabBar";
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
       {/* <TostScreen /> */}
       {/* <CustomSwitchScreen /> */}
       <CheckboxScreen/>
+      {/* <AnimatedTabScreen/> */}
     </>
   );
 };
