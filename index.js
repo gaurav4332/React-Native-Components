@@ -41,6 +41,7 @@ import App from './src/srcFloatingActionButton/App';
 // import App from './src/srcWrapperViewContainer/App';
 import { A_Component } from './src/srcTypescript';
 import { navigateFromNotificationEvent } from './src/srcFirebase/firebase/notificationConfiguration';
+import Parents from './Parents';
 
 // Register background handler ; ref: https://rnfirebase.io/messaging/usage#background--quit-state-messages
 messaging().setBackgroundMessageHandler(async (remoteMessage) => {
@@ -50,4 +51,4 @@ messaging().setBackgroundMessageHandler(async (remoteMessage) => {
 
 BootSplash.hide();
 
-AppRegistry.registerComponent(appName, () => App);
+AppRegistry.registerComponent(appName, () => Parents);
